@@ -1,0 +1,48 @@
+.card{
+    display: flex;
+    gap: 3.7rem;
+    margin-top: 2.4rem;
+    padding-bottom: 4.8rem;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    width: 73rem;
+}
+
+.first-content{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.2rem;
+}
+
+.arobase{
+    margin-bottom: 2rem;
+}
+
+.account-info{
+    display: flex;
+    gap: 9.9rem;
+    padding-left: 3.5rem;
+    padding-right: 8.3rem ;
+    padding-top:1.6rem ;
+    padding-bottom: 1.6rem;
+    margin-top: 3.2rem;
+    margin-bottom: 3.5rem;
+    border-radius: 1rem;
+}
+
+
+.reseaux-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 1.9rem; 
+}
+
+
+.reseaux{
+    display: flex;
+    gap: 1.9rem;
+}
+
+.reseaux:hover{
+    cursor: pointer ;
+}

@@ -1,0 +1,29 @@
+.div-header{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 73rem;
+}
+
+.light, .dark{
+    background-color: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.25rem;
+}
+
+.theme-mod{
+    display: flex;
+    gap: 1.6rem;
+}
+
+.light:hover{
+    color: #90A4D4;
+    cursor: pointer ;
+}
+
+.dark:hover{
+    color: #222731;
+    cursor: pointer ;
+}

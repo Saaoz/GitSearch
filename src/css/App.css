@@ -1,0 +1,147 @@
+/* space-mono-regular - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'SpaceM';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/Fonts/space-mono-v12-latin-regular.woff') format('woff2'), 
+       url('../assets/Fonts/space-mono-v12-latin-regular.woff') format('woff'); 
+}
+/* space-mono-700 - latin */
+@font-face {
+  font-display: swap; 
+  font-family: 'SpaceM';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../assets/Fonts/space-mono-v12-latin-700.woff2') format('woff2'), 
+       url('../assets/Fonts/space-mono-v12-latin-700.woff') format('woff'); 
+}
+
+
+.App-light {
+  --btn: #0079FF;
+  --bg-btn: #60ABFF;
+  --btn-text: #FFF;
+  --text: #697C9A;
+  --link: #4B6A9B;
+  --information: #2B3442;
+  --bg-back: #F6F8FF;
+  --bg-card: #FEFEFE;
+}
+
+.App-dark {
+  --btn: #0079FF;
+  --bg-btn: #60ABFF;
+  --text: #FFFFFF;
+  --link: #FFFFFF;
+  --information: #FFFFFF;
+  --bg-back: #141D2F;
+  --bg-card: #1E2A47;
+}
+
+
+
+h1 {
+  font-size: 2.6rem;
+  color: var(--information);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--btn);
+}
+
+p {
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+li {
+  list-style-type: none;
+  color: var(--information);
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+input{
+  border: none;
+  font-family: 'SpaceM' ;
+  color: var(--information);
+  background-color: var(--bg-card);
+}
+
+body, html{
+  font-family: 'SpaceM';
+  height: 100%;
+}
+
+.App-light,
+.App-dark {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-back);
+}
+
+.search-bar, .card {
+  background-color: var(--bg-card);
+  border-radius: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  padding-left: 3.2rem;
+  color: var(--text);
+}
+
+.account-info{
+  background-color: var(--bg-back);
+}
+
+
+
+@media (max-width: 768px) {
+  .App-light,
+  .App-dark {
+    width: 57.3rem;
+  }
+
+  /* header modif */
+
+  .div-header{
+    width: 57.3rem;
+  }
+
+  /* search modif */
+
+  .search-bar{
+    width: 57.3rem;
+  }
+
+  /* card modif */
+  .card{
+  width: 57.3rem;
+  }
+  .first-content{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 375px) {
+  .App-light,
+  .App-dark {
+    width: 32.7rem;
+  }
+  .div-header{
+    width: 32.7rem;
+  }
+  .search-bar{
+    width: 32.7rem;
+  }
+  .card{
+  width: 32.7rem;
+  }
+}

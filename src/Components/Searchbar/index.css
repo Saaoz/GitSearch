@@ -1,0 +1,45 @@
+.search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-top: 3.6rem;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+    width: 73rem;
+}
+
+.loupe-input {
+    display: flex;
+    gap: 2.4rem
+}
+
+.btn-search {
+    background-color: var(--btn);
+    color: var(--btn-text);
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    border-radius: 1rem;
+    border-color: var(--btn);
+    border: none;
+    color: #FFF;
+    font-weight: 700;
+}
+
+.btn-search:hover {
+    background-color: var(--bg-btn);
+
+}
+
+.error_btn{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.error-message{
+    color: #F74646;
+    font-weight: 700;
+
+}

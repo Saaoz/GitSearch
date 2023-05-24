@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
+import { ThemeContext } from './ThemeContext';
+import './css/App.css';
+import './css/reset.css';
+import './css/helpers.css';
+
+import Home from './Pages/Home';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+	const [isDarkMode, setIsDarkMode] = useState(false);
+	const [isActive, setIsActive] = useState(isDarkMode);
 
-export default App;
+	const toggleDarkMode = () => {
+		setIsDarkMode(!isDarkMode);
+		setIsActive(!isActive);
+	};
+
+	const toggleLightMode = () => {
+		setIsDarkMode(false);
+		setIsActive(false);
+	};
+
+	const theme = isDarkMode ? 'dark' : 'light';
+
+	return (
+		<Router>
+			<ThemeContext.Provider value={{ theme, toggleDarkMode, toggleLightMode }}>
+				<div className={`App-${isDarkMode ? 'dark' : 'light'}`}>
+					<Routes>
+						<Route path="/" element={<Home />} />
+					</Routes>
+				</div>
+			</ThemeContext.Provider>
+		</Router>
+	);
+}
+	export default App;
